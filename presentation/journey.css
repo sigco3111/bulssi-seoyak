@@ -1,0 +1,63 @@
+#journey-book{width:min(1120px,calc(100vw - 32px));max-height:92dvh;padding:0;border:1px solid #8d7652;background:#151d24;color:#e6d9bd;font-family:inherit;word-break:keep-all;overflow-wrap:normal}#journey-book::backdrop{background:#050a10d9;backdrop-filter:blur(8px)}#journey-book>header{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;background:radial-gradient(ellipse at 15% 100%,#41454b,#1a242e 65%);border-bottom:1px solid #9d815a55}#journey-book h2,#journey-book h3,#journey-book h4,#journey-book h5{margin:0}#journey-book>header small{font-size:9px;letter-spacing:.17em;color:#b8a17a}#journey-book h2{font-family:Georgia,"Hahmlet",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",serif;font-size:30px;font-weight:400;margin-top:5px}#journey-book button{font:inherit;color:inherit;background:#202a32;border:1px solid #a78a5b66;cursor:pointer;min-height:38px;padding:8px 12px}#journey-book button:hover:not(:disabled),#journey-book button.selected{background:#39424a;border-color:#d8b77d}#journey-book button:disabled{opacity:.45;cursor:default}.journey-summary{display:grid;grid-template-columns:repeat(4,1fr);padding:16px 28px;gap:12px;background:#0e171e}.journey-summary span{font-size:10px;color:#b7b7ad}.journey-summary b{display:block;font-size:18px;color:#e5c58a;margin-bottom:4px;font-weight:400;font-variant-numeric:tabular-nums}.journey-tabs{display:flex;gap:7px;padding:12px 28px;border-bottom:1px solid #9d815a44}.journey-layout{display:grid;grid-template-columns:250px minmax(0,1fr);max-height:60dvh;overflow:hidden}#journey-chapters{overflow-y:auto;padding:14px 12px;border-right:1px solid #9d815a44}#journey-chapters button{display:flex;align-items:center;gap:11px;width:100%;text-align:left;margin-bottom:7px;background:transparent;border-color:transparent}#journey-chapters i{font-size:20px;color:#b59a71;font-family:Georgia,serif;font-style:normal}#journey-chapters span{flex:1;min-width:0}#journey-chapters b{font-size:12px;font-weight:500}#journey-chapters small{display:block;font-size:9px;color:#abaeab;margin-top:5px}#journey-chapters em{font-size:9px;font-style:normal;color:#c8af79}#journey-content{overflow-y:auto;min-width:0;padding:24px 28px}.journey-chapter-heading{padding-bottom:20px;border-bottom:1px solid #a68d633d;margin-bottom:18px}.journey-chapter-heading small{color:#baa17b;font-size:9px;letter-spacing:.12em}.journey-chapter-heading h3{font-family:Georgia,"Hahmlet",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",serif;font-size:28px;font-weight:400;margin:8px 0!important}.journey-chapter-heading p{font-size:12px;line-height:1.8;color:#bdc4c6;margin:0}.journey-route article{display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #8d765233}.journey-route article>i{font:20px Georgia,serif;color:#8d7758}.journey-route article>div{flex:1;min-width:0}.journey-route small{color:#a9a291;font-size:10px}.journey-route h4{font-size:15px;margin:5px 0!important}.journey-route p{font-size:11px;line-height:1.7;color:#aab7bc}.journey-route article b{font-size:10px;color:#c4bda9;font-weight:400}.journey-route article button{font-size:10px!important;flex-shrink:0}.journey-route .locked{opacity:.62}.journey-route .complete>i{color:#a0c6b1}.journey-echoes{margin-top:25px}.journey-echoes>h4{font-size:20px;color:#dbc48f;font-weight:400}.journey-echoes>p{font-size:12px;color:#b4bcba;line-height:1.8}.journey-echoes article{display:flex;align-items:center;gap:15px;padding:15px;margin:10px 0;background:linear-gradient(130deg,#2a3041,#1c2831);border:1px solid #78819844}.journey-echoes article>div{flex:1;min-width:0}.journey-echoes h5{font-size:14px;font-weight:400;color:#d2c6ea}.journey-echoes article p{font-size:11px;color:#b7c0c5;line-height:1.7;margin:6px 0}.journey-echoes small{font-size:9px;color:#b7aa8d;line-height:1.8}.journey-echoes article button{font-size:11px!important}.memory-wallet{display:flex;gap:15px;flex-wrap:wrap;padding:12px;background:#0d1820;font-size:11px}.memory-wallet b{color:#dfc48c}.memory-set{padding:16px;margin:14px 0;border-left:2px solid #aa9162;background:#202a30}.memory-set h4{font-size:17px;font-weight:400;color:#d9c395}.memory-set p{font-size:11px;margin:8px 0;color:#ccd0c0}.memory-set small{font-size:9px;color:#aeb6b7;line-height:1.7}.memory-recipes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.memory-recipes article{min-width:0;border:1px solid #8d765244;background:#111c24}.memory-item-art{width:100%;border:0!important;padding:0!important;position:relative;display:block;overflow:hidden;aspect-ratio:1.4}.memory-item-art img{width:100%;height:100%;object-fit:contain;background:radial-gradient(ellipse,#2c3743,#141b25)}.memory-item-art small{position:absolute;bottom:8px;left:0;right:0;font-size:9px!important;color:#d9c296!important}.memory-recipes article>div{padding:12px}.memory-recipes small{font-size:9px;color:#a5b6ba}.memory-recipes h5{font-size:12px;line-height:1.6;margin:7px 0!important;color:#dbc796}.memory-recipes p{font-size:10px;color:#b6b6aa}.memory-recipes article>div button{width:100%;font-size:11px!important}.bestiary-note{font-size:12px;line-height:1.8;color:#b9c6ca}.memory-bestiary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.memory-bestiary article{border-bottom:1px solid #9d815a44;padding-bottom:15px;min-width:0}.memory-bestiary img{width:100%;aspect-ratio:1.1;object-fit:contain;background:#101a23}.memory-bestiary h4{font-size:15px;font-weight:400;color:#d9c599}.memory-bestiary p{font-size:11px;line-height:1.7;color:#abbac1}#journey-book>footer{padding:12px 28px;border-top:1px solid #9d815a44;background:#111a22}#journey-message{font-size:11px;line-height:1.7;margin:0;color:#c7b898}#travel-regions .portal-chapter-label{font-size:10px;color:#c9b187;margin:20px 7px 9px}.gear-set-effects{padding:12px;background:#1e2e29;border-left:2px solid #9fba80;color:#c1d1ae;font-size:11px;line-height:1.8}.gear-set-effects b{display:block;color:#dfd5b6}.gear-set-effects p{margin:5px 0}.gear-set-effects .inactive{opacity:.5}@media(max-width:700px){#journey-book{width:calc(100vw - 32px);max-height:94dvh}#journey-book>header{padding:16px}#journey-book h2{font-size:25px}.journey-summary{padding:12px 16px;grid-template-columns:repeat(2,1fr);gap:12px}.journey-tabs{padding:10px 16px;gap:5px}.journey-tabs button{font-size:10px!important;padding:7px!important;flex:1}.journey-layout{display:flex;flex-direction:column;max-height:57dvh}#journey-chapters{display:flex;flex-shrink:0;overflow-x:auto;overflow-y:hidden;padding:10px;border-right:0;border-bottom:1px solid #9d815a44}#journey-chapters button{width:185px;flex-shrink:0;margin:0 4px 0 0}#journey-content{padding:18px 16px;overflow-y:auto}.journey-chapter-heading h3{font-size:23px}.journey-route article{align-items:flex-start;gap:8px;flex-wrap:wrap}.journey-route article>div{flex-basis:calc(100% - 35px)}.journey-route article>button{margin-left:29px}.journey-echoes article{flex-wrap:wrap;padding:12px}.journey-echoes article>div{flex-basis:100%}.memory-recipes{grid-template-columns:1fr}.memory-bestiary{grid-template-columns:1fr}#journey-book>footer{padding:12px 16px}}
+#journey-book[open]{display:flex;flex-direction:column;height:min(900px,92dvh);overflow:hidden}.journey-layout{flex:1;min-height:0;max-height:none}#journey-book>header,#journey-book>footer,.journey-summary,.journey-tabs{flex-shrink:0}@media(max-width:700px){.journey-layout{max-height:none}#journey-chapters{max-height:82px}}
+
+/* 2026-11-10 화면 보완: 대화, 타이틀, 가방, 상점, 직업 선택, 터치. */
+/* shortcut: 기존 QA가 마지막 줄에서도 이 버튼을 누르므로 숨기지 않고 투명하게 둔다, QA 스크립트를 고치면 hidden으로 바꾼다. */
+[data-npc-next].spent{opacity:0;cursor:default}
+#entry-continue:disabled{opacity:.42;cursor:default;box-shadow:none}
+.combat-corner .hint-touch{display:none}
+@media(hover:none) and (pointer:coarse){.combat-corner .hint-mouse{display:none}.combat-corner .hint-touch{display:inline}}
+/* 가방: 데스크톱은 목록과 상세를 두 열로 한 화면에. */
+@media(min-width:901px){
+#client-panel:has(>#client-panel-content>.campaign-bag){width:min(1200px,calc(100vw - 40px));overflow:hidden}
+#client-panel-content>.campaign-bag{display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,440px);grid-template-rows:auto auto minmax(0,1fr) auto;column-gap:26px;height:calc(min(88dvh,100dvh - 60px) - 88px);box-sizing:border-box}
+#client-panel-content>.campaign-bag>*{grid-column:1;min-width:0}
+#client-panel-content>.campaign-bag>#campaign-inventory{max-height:none;margin:0 0 12px;align-content:start;grid-template-columns:repeat(2,minmax(0,1fr))}
+#client-panel-content>.campaign-bag>#campaign-item{grid-column:2;grid-row:1/-1;overflow:auto;border-top:0;border-left:1px solid #79624755;padding:0 8px 0 24px;scrollbar-width:thin;scrollbar-color:#8d7357 #17141c}
+#client-panel-content>.campaign-bag>#campaign-item .gear-owned-portrait{float:none;width:auto;display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;align-items:end;margin:0 0 14px}
+#client-panel-content>.campaign-bag>#campaign-item .gear-owned-portrait img{width:120px;height:120px}
+#client-panel-content>.campaign-bag>#campaign-item .gear-heading>h3{font-size:23px;margin:6px 0 8px}
+#client-panel-content>.campaign-bag>#campaign-item .gear-compare-label{grid-template-columns:minmax(0,1fr) 64px 80px}
+#client-panel-content>.campaign-bag>#campaign-item dl.gear-stat-table>div{grid-template-columns:minmax(0,1fr) 152px;padding:7px 0}
+#client-panel-content>.campaign-bag>#campaign-item .gear-stat-table dd{grid-template-columns:64px 80px}
+#client-panel-content>.campaign-bag>#campaign-item .campaign-item-actions{position:sticky;bottom:0;padding:10px 0 4px;background:#171820;border-top:1px solid #79604477}
+}
+/* 가방: 좁은 화면은 한 열, 고른 장비의 장착 버튼이 화면 아래에 붙어 따라온다. */
+@media(max-width:900px){#client-panel #campaign-item .campaign-item-actions{position:sticky;bottom:0;padding:10px 0 8px;background:#171820;border-top:1px solid #79604477;z-index:1}}
+/* 상점: 800px 높이에서도 인물 이름과 구입 버튼이 한 화면에, 비교 표는 넓게. */
+@media(min-width:601px){
+.npc-dialog[data-painted=true] .npc-layout{min-height:min(650px,calc(90dvh - 2px))}
+.npc-dialog[data-painted=true] .npc-portrait{min-height:min(650px,calc(90dvh - 2px))}
+.npc-dialog[data-painted=true] #npc-talk{min-height:min(490px,calc(90dvh - 170px))}
+.npc-dialog[data-mode=shop] .npc-content{display:flex;flex-direction:column;min-height:0}
+.npc-dialog[data-mode=shop] #npc-shop:not([hidden]){display:flex;flex-direction:column;min-height:0;flex:1}
+.npc-dialog[data-mode=shop] .shop-workbench{flex:1;min-height:0}
+.npc-dialog[data-mode=shop] .shop-grid{max-height:min(460px,calc(90dvh - 270px))}
+.npc-dialog[data-mode=shop] #shop-detail.shop-detail{height:min(610px,calc(90dvh - 270px));min-height:300px}
+}
+@media(min-width:901px){
+.npc-dialog[data-mode=shop] .shop-workbench{grid-template-columns:minmax(0,1fr) 340px}
+.npc-dialog[data-mode=shop] .shop-info-scroll .gear-compare-label{grid-template-columns:minmax(0,1fr) 64px 80px;font-size:9px}
+.npc-dialog[data-mode=shop] .shop-info-scroll .gear-stat-table>div{grid-template-columns:minmax(0,1fr) 150px;font-size:10px}
+.npc-dialog[data-mode=shop] .shop-info-scroll .gear-stat-table dd{grid-template-columns:64px 80px}
+.shop-info-scroll .gear-stat-table dt{white-space:nowrap}
+}
+/* 좁은 화면 기술 칸: 세 칸이 딱 맞게 보이고 나머지는 옆으로 넘긴다. */
+@media(max-width:600px){.game-client .combat-skills{scroll-snap-type:x mandatory}.game-client .combat-skills>.combat-skill{flex:0 0 calc((100% - 12px)/3);min-width:0;scroll-snap-align:start}}
+@media(min-width:901px){
+.npc-dialog[data-mode=shop] .shop-workbench{grid-template-columns:minmax(0,1fr) 430px}
+.npc-dialog[data-mode=shop] #shop-detail.shop-detail{display:grid;grid-template-columns:104px minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;column-gap:14px}
+.npc-dialog[data-mode=shop] .shop-detail-picture{align-self:start;margin:0}
+.npc-dialog[data-mode=shop] .shop-detail-picture img{height:104px!important}
+.npc-dialog[data-mode=shop] .shop-info-scroll{grid-column:2}
+.npc-dialog[data-mode=shop] .shop-info-scroll .gear-heading>span{display:block}
+.npc-dialog[data-mode=shop] .shop-info-scroll .gear-heading>h3{margin:4px 0 6px}
+.npc-dialog[data-mode=shop] .shop-detail-actions{grid-column:1/-1;grid-template-columns:1fr 1fr}
+}
+/* 직업 카드: 야만전사 그림만 인물이 작아 확대해 다른 카드와 크기를 맞춘다. */
+.hero-picker span{position:relative;z-index:1;background:#111217}
+.hero-picker [data-hero=barbarian] img{transform:scale(1.75);transform-origin:52% 100%}
+.entry-selection>header{text-shadow:0 2px 12px #000d}
+/* 외형·탈것 무대: 고해상도(DPR 2 이상) 화면에서 캔버스 실제 픽셀 크기가 무대 높이를 계속 밀어 올려 목록과 적용 버튼이 화면 밖으로 사라지던 문제를 막는다. */
+#wardrobe-stage{position:relative;overflow:hidden}
+#wardrobe-stage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block}

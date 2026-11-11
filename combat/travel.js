@@ -1,0 +1,6 @@
+import {CHAPTERS,chapterFor} from './expansion-data.js';
+import {chapterAttuned} from './journey.js';
+import {REGIONS} from './maps.js';
+export function travelStatus(profile,id){const region=REGIONS.find(r=>r.id===id);if(!region)return{allowed:false,reason:'존재하지 않는 지역입니다.'};if(profile.unlocked.includes(id))return{allowed:true,region,reason:profile.completed.includes(id)?'완료한 지역 · 다시 도전할 수 있습니다.':'입장할 수 있습니다.'};const previous=REGIONS[region.index-1],chapter=chapterFor(previous?.id);if(previous&&profile.completed.includes(previous.id)&&chapter?.final===previous.id&&!chapterAttuned(profile,chapter))return{allowed:false,region,reason:chapter.title+'의 세 가지 잔향을 완주하면 다음 세계가 열립니다. 야영지의 기억의 지도를 여세요.'};return{allowed:false,region,reason:previous?previous.name+'의 '+previous.boss+' 처치 후 열립니다.':'앞선 여정을 먼저 완료하세요.'};}
+export function rememberReturn(profile,region,position,seed){if(!region||region==='camp')return;profile.returnPoint={region,x:position.x,z:position.z,seed};}
+export function validReturn(profile){const r=profile?.returnPoint;return!!(r&&r.region!=='camp'&&profile.unlocked.includes(r.region)&&Number.isFinite(r.x)&&Number.isFinite(r.z)&&Math.abs(r.x)<30&&Math.abs(r.z)<30&&profile.regions[r.region]?.seed===r.seed);}

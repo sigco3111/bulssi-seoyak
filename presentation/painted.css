@@ -1,0 +1,42 @@
+/* Original generated art, with the existing interactive 3D selection preserved. */
+#entry-keyart{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 50%;pointer-events:none;opacity:0;transition:opacity .6s ease;filter:saturate(.85)}
+#game-entry[data-screen=title] #entry-keyart,#game-entry[data-screen=cinematic] #entry-keyart{opacity:1}
+#game-entry[data-screen=title] #entry-stage,#game-entry[data-screen=cinematic] #entry-stage{visibility:hidden}
+#game-entry[data-screen=title] .entry-vignette{background:linear-gradient(90deg,#0a1016e8 0%,#0b1116a6 28%,#10151a15 68%),linear-gradient(0deg,#0a1016bc,transparent 30%,transparent 85%,#0a101655)}
+#game-entry[data-screen=cinematic] #entry-keyart{animation:vow-art-drift 16s ease-out both}
+#game-entry[data-screen=cinematic] .entry-vignette{background:linear-gradient(0deg,#05090ff0,transparent 60%)}
+.entry-title .entry-overline{color:#d7bf92}.entry-title .entry-tagline{color:#e5ddca;text-shadow:0 2px 9px #000}.entry-title .entry-promise{font-size:13px;color:#bcb6a6;letter-spacing:2px}.entry-title .entry-actions .game-primary{background:linear-gradient(100deg,#703c35,#512a29);border-color:#ae8570}
+.npc-dialog[data-painted=true]{width:min(1150px,calc(100vw - 48px));background:#131b21}
+.npc-dialog[data-painted=true] .npc-layout{grid-template-columns:43% minmax(0,1fr);min-height:650px}
+.npc-dialog[data-painted=true][data-mode=shop] .npc-layout{grid-template-columns:27% minmax(0,1fr)}
+.npc-dialog[data-painted=true] .npc-portrait{min-height:650px;background-image:linear-gradient(0deg,#0c1519ee,#142028aa 30%,#26343e88),var(--portrait-backdrop);background-size:cover;background-position:66% center;border-right:1px solid #88745477}
+#npc-painted-portrait{position:absolute;inset:14px 0 0;width:100%;height:calc(100% - 14px);object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 5px 20px #0008);transform-origin:50% 80%;animation:portrait-breathe 6s ease-in-out infinite;transition:filter .3s,opacity .3s}
+.npc-dialog[data-mode=shop] #npc-painted-portrait{inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%}
+.npc-dialog[data-speaking=true] #npc-painted-portrait{filter:drop-shadow(0 5px 22px #c3ab7833)}
+.npc-dialog[data-painted=true] .npc-identity{left:0;right:0;top:auto;bottom:0;padding:60px 30px 24px;background:linear-gradient(transparent,#0d151cf0 70%);pointer-events:none}
+.npc-dialog[data-painted=true] .npc-identity h2{font-size:38px;color:#eadcc0;letter-spacing:2px;margin:7px 0}.npc-dialog[data-painted=true] .npc-identity>span{font-size:11px;letter-spacing:1px;color:#c8b28b}.npc-dialog[data-painted=true] .npc-identity p{font-size:11px;color:#b7bdba}
+.npc-dialog[data-painted=true] .npc-content{padding:0 30px 28px;background:linear-gradient(130deg,#252b2e,#151c22)}
+.npc-dialog[data-painted=true] #npc-talk{min-height:490px}.npc-dialog[data-painted=true] .npc-speech{padding:42px 0 22px;min-height:250px}.npc-dialog[data-painted=true] .npc-speech p{font-size:25px;line-height:1.9;color:#ece1cb;min-height:130px}.npc-dialog[data-painted=true] #npc-choices{gap:8px}.npc-dialog[data-painted=true] #npc-choices button{font-size:13px;background:linear-gradient(90deg,#343a35,#252d2d);border-color:#87755466;padding:14px 15px}.npc-dialog[data-painted=true] .npc-content>header{padding:21px 0;color:#b9b7a8;border-color:#97836555}
+@keyframes vow-art-drift{from{transform:scale(1)}to{transform:scale(1.065) translateX(-.4%)}}
+@keyframes portrait-breathe{0%,100%{transform:translateY(0) rotate(-.12deg)}50%{transform:translateY(-2px) rotate(.12deg)}}
+@media(max-width:900px){.npc-dialog[data-painted=true] .npc-layout{grid-template-columns:38% minmax(0,1fr)}.npc-dialog[data-painted=true] .npc-content{padding:0 23px 23px}.npc-dialog[data-painted=true] .npc-speech p{font-size:22px}}
+@media(max-width:600px){
+ #entry-keyart{object-position:83% 50%}#game-entry[data-screen=title] .entry-vignette{background:linear-gradient(0deg,#0a1016f5,#0a1016da 28%,#0a10162b 75%,#0a101644)}
+ #game-entry[data-screen=title] .entry-title{justify-content:flex-end;padding:100px 22px 78px;align-items:flex-start;text-align:left}#game-entry[data-screen=title] .game-logo{width:285px;max-width:100%;margin:12px 0}.entry-title .entry-promise{font-size:10px;margin-bottom:19px;letter-spacing:1px}.entry-title .entry-actions{width:min(290px,100%)}.entry-title .entry-tagline{font-size:15px;margin-bottom:13px}.entry-title .entry-status{margin-top:15px}
+ .npc-dialog[data-painted=true]{width:calc(100vw - 24px);max-height:94dvh}.npc-dialog[data-painted=true] .npc-layout,.npc-dialog[data-painted=true][data-mode=shop] .npc-layout{display:block;min-height:0}
+ .npc-dialog[data-painted=true] .npc-portrait{height:242px;min-height:242px;border-right:0;border-bottom:1px solid #88745477;background-position:70% 55%}#npc-painted-portrait{inset:4px auto 0 0;width:66%;height:calc(100% - 4px);object-position:50% 3%}
+ .npc-dialog[data-painted=true] .npc-identity{left:56%;top:auto;bottom:0;padding:16px 13px 20px 0;background:none}.npc-dialog[data-painted=true] .npc-identity h2{font-size:29px;letter-spacing:1px}.npc-dialog[data-painted=true] .npc-identity>span{font-size:9px;letter-spacing:0}.npc-dialog[data-painted=true] .npc-identity p{font-size:9px;line-height:1.8}
+ .npc-dialog[data-painted=true] .npc-content{padding:0 18px 20px}.npc-dialog[data-painted=true] .npc-content>header{padding:13px 0}.npc-dialog[data-painted=true] #npc-talk{min-height:300px}.npc-dialog[data-painted=true] .npc-speech{padding:20px 0 16px;min-height:148px}.npc-dialog[data-painted=true] .npc-speech p{font-size:20px;line-height:1.8;min-height:80px}.npc-dialog[data-painted=true] #npc-choices button{font-size:12px;padding:12px}
+ .npc-dialog[data-painted=true][data-mode=shop] .npc-portrait{height:170px;min-height:170px}.npc-dialog[data-painted=true][data-mode=shop] #npc-painted-portrait{width:52%}
+}
+@media(prefers-reduced-motion:reduce){#npc-painted-portrait,#game-entry[data-screen=cinematic] #entry-keyart{animation:none!important}#entry-keyart{transition:none}}
+/* 직업 선택 원화: 칸 높이는 그대로 두고 그림만 위로 키운다(제목 글자 오른쪽 빈자리). */
+#hero-painting{grid-column:1;grid-row:2;margin:0;position:relative;height:180px;align-self:end;justify-self:end;width:1px;right:-40px}
+#hero-painting img{position:absolute;right:0;bottom:0;height:clamp(200px,calc(100dvh - 470px),340px);aspect-ratio:3/4;max-width:none;object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 8px 24px #000b);pointer-events:none}
+#hero-painting.model img{visibility:hidden}
+#hero-painting button{position:absolute;right:calc(clamp(200px,calc(100dvh - 470px),340px)*.75 + 14px);bottom:0;white-space:nowrap;border:1px solid #705938;background:#0b1015c9;color:#c8b38d;font-size:11px;padding:8px 12px;border-radius:0}
+#hero-painting.model button{right:0}
+.hero-picker img.painted{transform:none!important;object-position:50% 30%;filter:none}
+.boss-insignia img{display:block;width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 2px 6px #000a)}
+@media(max-width:1100px){#hero-painting{right:0}#hero-painting img{height:180px}#hero-painting button{right:149px}}
+@media(max-width:600px){#hero-painting{width:auto;height:clamp(110px,calc(100dvh - 700px),240px);align-self:stretch;flex-shrink:0}#hero-painting img{height:100%;right:0}#hero-painting button{right:auto;left:0;font-size:9px;padding:6px 9px}#hero-painting.model button{right:auto}.entry-selection.has-painting .hero-select-info{margin-top:0}.boss-insignia img{width:40px;height:40px}}

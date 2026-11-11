@@ -1,0 +1,7 @@
+import {CLASS_SKILLS} from './skills.js';
+export const RESERVED_KEYS=new Set(['KeyW','KeyA','KeyS','KeyD','KeyE','KeyT','KeyI','KeyM','Space','Escape','Tab']);
+export const BINDABLE_KEYS=[...Array.from({length:10},(_,i)=>'Digit'+i),...'QRFZXCVGBNLKJHUOP'.split('').map(k=>'Key'+k)];
+export const keyLabel=key=>key?.replace(/^Digit|^Key/,'')||'미지정';
+export function defaultControls(classId){const list=CLASS_SKILLS[classId]||['basic'];return{left:'basic',right:list[1]||'basic',slots:list.slice(0,6).map((skill,i)=>({skill,key:'Digit'+(i+1)}))};}
+export function sanitizeControls(value,classId){const defaults=defaultControls(classId),list=CLASS_SKILLS[classId]||['basic'],valid=s=>list.includes(s),keys=new Set();const slots=defaults.slots.map((fallback,i)=>{const source=value?.slots?.[i],skill=valid(source?.skill)?source.skill:fallback.skill;let key=BINDABLE_KEYS.includes(source?.key)&&!RESERVED_KEYS.has(source.key)?source.key:fallback.key;if(keys.has(key))key=BINDABLE_KEYS.find(k=>!keys.has(k)&&!RESERVED_KEYS.has(k));keys.add(key);return{skill,key};});return{left:valid(value?.left)?value.left:defaults.left,right:valid(value?.right)?value.right:defaults.right,slots};}
+export function bindKey(config,index,key){if(!BINDABLE_KEYS.includes(key)||RESERVED_KEYS.has(key))return{ok:false,reason:'이 키는 이동·메뉴·브라우저 조작에 사용합니다. 숫자 또는 Q/R/F/Z/X/C/V 같은 문자 키를 골라 주세요.'};if(config.slots.some((s,i)=>i!==index&&s.key===key))return{ok:false,reason:keyLabel(key)+' 키는 다른 기술 칸에 이미 지정되어 있습니다.'};config.slots[index].key=key;return{ok:true};}

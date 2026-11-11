@@ -1,0 +1,9 @@
+import DESIGN from '../design/game-design.json' with {type:'json'};
+import {MAX_LEVEL} from './expansion-data.js';
+export const TUNING=DESIGN.combatBalance,PROGRESSION_VERSION=2;
+export const requiredXp=level=>{const c=TUNING.progression.curve,l=Math.max(1,Math.min(MAX_LEVEL,level));return Math.floor(c.base+c.linear*l+c.quadratic*l*l);};
+export const xpMultiplier=(level,areaLevel)=>Math.max(TUNING.progression.minimumXpMultiplier,1-Math.max(0,level-areaLevel-TUNING.progression.overlevelGrace)*TUNING.progression.overlevelPenalty);
+export function killReward(level,region,monster,firstClear=false){const p=TUNING.progression,base=monster.boss?p.bossXpBase+region.index*p.bossXpPerRegion:(p.normalXpBase+region.index*p.normalXpPerRegion)*(monster.elite?1.35:1),bonus=firstClear?p.firstClearBase+region.index*p.firstClearPerRegion:0;return Math.max(1,Math.round(base*xpMultiplier(level,region.level)+bonus));}
+export const objectiveReward=region=>TUNING.progression.objectiveBase+region.index*TUNING.progression.objectivePerRegion;
+export function monsterStats(region,tier,{boss=false,elite=false,kind='melee'}={}){const c=TUNING.enemies,l=region.level;if(region.chapter)return{hp:Math.round((boss?1600+l*185:220+l*17)*(elite?2.2:1)*(1+tier*.55)),damage:(boss?19+l*.66:8+l*.36)*(region.chapter===1?(boss?.9:.8):1)*(elite?1.2:1)*(1+tier*.25),speed:boss?1.6:kind==='archer'?1.7:1.8};return{hp:Math.round((boss?c.bossHpBase+l*c.bossHpPerLevel:c.hpBase+l*c.hpPerLevel)*(elite?c.eliteHp:1)*(1+tier*(boss?.85:.7))),damage:(boss?c.bossDamageBase+l*c.bossDamagePerLevel:c.damageBase+l*c.damagePerLevel)*(elite?c.eliteDamage:1)*(1+tier*.35),speed:boss?1.4:kind==='archer'?1.65:1.6};}
+export const goldReward=(region,tier,boss)=>Math.round((boss?TUNING.economy.bossGoldBase+region.index*TUNING.economy.bossGoldPerRegion:TUNING.economy.normalGoldBase+region.index*TUNING.economy.normalGoldPerRegion)*(1+tier*.35));

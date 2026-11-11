@@ -1,0 +1,13 @@
+import DESIGN from '../design/game-design.json' with {type:'json'};
+export const EXPANSION=DESIGN.campaign.expansion;
+export const MAX_LEVEL=EXPANSION.maxLevel;
+export const CHAPTERS=EXPANSION.chapters;
+export const EXTRA_REGIONS=EXPANSION.regions;
+export const chapterFor=id=>CHAPTERS.find(c=>c.regions.includes(id));
+export const SETS=EXPANSION.sets;
+export const GEAR_VISUALS=new Map(DESIGN.equipment.items.filter(i=>i.visual).map(i=>[i.id,i.visual]));
+export const EXPANSION_SKILLS=Object.fromEntries(DESIGN.classes.flatMap(c=>c.skills).filter(s=>s.runtime).map(s=>[s.id,s.runtime]));
+export const EXTRA_THEMES={glass:[0x6a8390,0x2d4857,0x9fd0d6],ink:[0x706576,0x382c42,0xc7a3ab],tide:[0x527d83,0x264752,0xb9c9b6],clock:[0x8c7960,0x554d42,0xd4af67],root:[0x66765b,0x364e42,0xb5c88a],void:[0x64687f,0x33374f,0xc3b0e9]};
+export const EXTRA_LIGHTING=Object.fromEntries(Object.entries(EXTRA_THEMES).map(([id,[floor,wall,gold]])=>[id,{key:gold,fill:floor,sky:floor,ground:wall,exposure:1.2}]));
+const centers=[[[17,29],[8,25],[27,26],[6,17],[27,17],[17,12],[8,7],[28,7],[17,3]],[[17,29],[7,26],[27,24],[8,17],[28,16],[17,11],[6,7],[27,7],[17,3]],[[17,29],[9,25],[27,25],[6,17],[26,16],[17,12],[7,7],[28,7],[17,3]]];
+export const EXTRA_LAYOUTS=Object.fromEntries(EXTRA_REGIONS.map((r,i)=>[r.id,{centers:centers[i%3],shape:r.shape,names:[r.name+'의 문턱',r.anchors[0],r.anchors[1],r.boss+'의 자리'],hint:chapterFor(r.id).story}]));
